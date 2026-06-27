@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luvyoun0224-beep.github.io/jasonjedi-investing-site/sitemap.xml

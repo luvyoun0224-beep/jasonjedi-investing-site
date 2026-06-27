@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI infrastructure investing dashboard</title>
+  <desc id="desc">A market dashboard with semiconductor chips, stock candles, and infrastructure signals.</desc>
+  <rect width="960" height="720" fill="#f7faf4"/>
+  <rect x="60" y="72" width="840" height="576" rx="0" fill="#ffffff" stroke="#dce4dc" stroke-width="2"/>
+  <rect x="96" y="112" width="320" height="220" fill="#eaf3ef" stroke="#cbd8d1"/>
+  <rect x="128" y="142" width="130" height="130" fill="#164f49"/>
+  <g stroke="#d89b32" stroke-width="8">
+    <path d="M156 174h74M156 206h74M156 238h74"/>
+    <path d="M290 152v110M318 152v110M346 152v110"/>
+  </g>
+  <rect x="454" y="112" width="350" height="220" fill="#fdf9ef" stroke="#e3d5b8"/>
+  <polyline points="486,286 536,246 584,262 636,198 684,220 744,154" fill="none" stroke="#1d7664" stroke-width="8"/>
+  <g fill="#a54a43">
+    <rect x="506" y="210" width="16" height="58"/>
+    <rect x="572" y="174" width="16" height="92"/>
+    <rect x="704" y="188" width="16" height="78"/>
+  </g>
+  <g fill="#2f6f9f">
+    <rect x="538" y="194" width="16" height="74"/>
+    <rect x="638" y="148" width="16" height="118"/>
+    <rect x="744" y="128" width="16" height="138"/>
+  </g>
+  <rect x="96" y="372" width="708" height="82" fill="#f3f7f2" stroke="#dce4dc"/>
+  <rect x="124" y="402" width="160" height="22" fill="#1d7664"/>
+  <rect x="312" y="402" width="220" height="22" fill="#d89b32"/>
+  <rect x="560" y="402" width="188" height="22" fill="#2f6f9f"/>
+  <g fill="#162018">
+    <circle cx="132" cy="520" r="18"/>
+    <circle cx="220" cy="520" r="18"/>
+    <circle cx="308" cy="520" r="18"/>
+    <circle cx="396" cy="520" r="18"/>
+    <circle cx="484" cy="520" r="18"/>
+  </g>
+  <g stroke="#9fb0a4" stroke-width="4">
+    <line x1="150" y1="520" x2="202" y2="520"/>
+    <line x1="238" y1="520" x2="290" y2="520"/>
+    <line x1="326" y1="520" x2="378" y2="520"/>
+    <line x1="414" y1="520" x2="466" y2="520"/>
+  </g>
+  <text x="96" y="608" fill="#647067" font-family="Arial, sans-serif" font-size="30" font-weight="700">GPU · HBM · DATA CENTER · SPACE</text>
+</svg>

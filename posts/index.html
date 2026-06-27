@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>전체 투자 노트 | Jason Jedi Investing</title>
+    <meta
+      name="description"
+      content="Jason Jedi Investing의 미국주식, AI 인프라, 반도체, 우주 경제, 한국 시장 투자 노트 목록입니다."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://luvyoun0224-beep.github.io/jasonjedi-investing-site/posts/" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">JJ</span>
+        <span>
+          <strong>Jason Jedi Investing</strong>
+          <small>AI 인프라 투자노트</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="../posts/">글 목록</a>
+        <a href="../about.html">소개</a>
+        <a href="../disclaimer.html">투자 고지</a>
+        <a href="../contact.html">문의</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">All Notes</p>
+        <h1>투자 노트 전체 목록</h1>
+        <p>네이버 블로그에 작성한 글을 주제별로 정리한 허브입니다. 원문은 각 글에서 연결됩니다.</p>
+      </section>
+      <div class="filters" id="filters"></div>
+      <section class="section">
+        <div class="post-grid" id="post-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Jason Jedi Investing. 개인 투자 기록이며 투자 권유가 아닙니다.</p>
+      <nav aria-label="하단 메뉴">
+        <a href="../privacy.html">개인정보처리방침</a>
+        <a href="../disclaimer.html">투자 고지</a>
+        <a href="../contact.html">문의</a>
+      </nav>
+    </footer>
+    <script type="module">
+      const formatDate = (value) => {
+        const date = new Date(value);
+        return Number.isNaN(date.getTime())
+          ? value
+          : new Intl.DateTimeFormat("ko-KR", { year: "numeric", month: "short", day: "numeric" }).format(date);
+      };
+
+      const response = await fetch("../data/posts.json");
+      const { posts, categories } = await response.json();
+      document.querySelector("#year").textContent = String(new Date().getFullYear());
+
+      const filters = document.querySelector("#filters");
+      const grid = document.querySelector("#post-grid");
+      let active = "all";
+
+      const renderFilters = () => {
+        filters.innerHTML = [
+          { id: "all", label: "전체" },
+          ...categories
+        ]
+          .map(
+            (category) =>
+              `<button class="filter-button ${active === category.id ? "active" : ""}" data-filter="${category.id}">${category.label}</button>`
+          )
+          .join("");
+      };
+
+      const renderPosts = () => {
+        const visible = active === "all" ? posts : posts.filter((post) => post.topicId === active);
+        grid.innerHTML = visible
+          .map(
+            (post) => `
+              <article class="article-card">
+                <div class="article-meta">
+                  <span class="pill">${post.topicLabel}</span>
+                  <span>${formatDate(post.isoDate)}</span>
+                </div>
+                <h3><a href="../${post.localPath}">${post.title}</a></h3>
+                <p>${post.summary}</p>
+              </article>
+            `
+          )
+          .join("");
+      };
+
+      filters.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-filter]");
+        if (!button) return;
+        active = button.dataset.filter;
+        renderFilters();
+        renderPosts();
+      });
+
+      renderFilters();
+      renderPosts();
+    </script>
+  </body>
+</html>

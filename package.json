@@ -1,0 +1,15 @@
+{
+  "name": "jasonjedi-investing-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static AdSense-ready investing homepage based on the Jason Jedi Naver blog RSS.",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-rss.mjs",
+    "serve": "node scripts/dev-server.mjs",
+    "check": "node scripts/check-site.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

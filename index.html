@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jason Jedi Investing | AI 인프라 투자노트</title>
+    <meta
+      name="description"
+      content="미국주식, AI 인프라, 반도체, 우주 산업, 한국 시장 이슈를 개인 투자자의 관점으로 정리하는 투자 노트입니다."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Jason Jedi Investing | AI 인프라 투자노트" />
+    <meta
+      property="og:description"
+      content="미국주식, AI 인프라, 반도체, 우주 산업을 한 투자자의 관점으로 정리합니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/og-cover.svg" />
+    <link rel="canonical" href="https://luvyoun0224-beep.github.io/jasonjedi-investing-site/" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Jason Jedi Investing",
+        "alternateName": "AI 인프라 투자노트",
+        "url": "https://luvyoun0224-beep.github.io/jasonjedi-investing-site/",
+        "inLanguage": "ko-KR",
+        "description": "미국주식, AI 인프라, 반도체, 우주 산업을 개인 투자자의 관점으로 정리하는 투자 노트입니다."
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Jason Jedi Investing home">
+        <span class="brand-mark">JJ</span>
+        <span>
+          <strong>Jason Jedi Investing</strong>
+          <small>AI 인프라 투자노트</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="posts/">글 목록</a>
+        <a href="about.html">소개</a>
+        <a href="disclaimer.html">투자 고지</a>
+        <a href="contact.html">문의</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">미국주식 · AI 인프라 · 반도체 · 우주 경제</p>
+          <h1>AI가 바꾸는 산업의 병목을 투자자의 언어로 기록합니다.</h1>
+          <p>
+            엔비디아, HBM, 데이터센터, 스페이스X, 환율과 정책 이슈까지. 빠르게 움직이는 시장 뉴스를
+            장기 투자 관점으로 다시 정리합니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="posts/">최신 글 보기</a>
+            <a class="button secondary" href="about.html">운영자 소개</a>
+          </div>
+        </div>
+        <figure class="hero-visual" aria-label="AI 인프라 투자 대시보드 일러스트">
+          <img class="hero-profile" src="assets/profile.jpg" alt="Jason Jedi 블로그 프로필" />
+          <div class="signal-board" aria-hidden="true">
+            <span>GPU</span>
+            <span>HBM</span>
+            <span>DATA CENTER</span>
+            <span>SPACE</span>
+          </div>
+          <figcaption>AI 인프라 투자 사이클을 추적하는 개인 투자 노트</figcaption>
+        </figure>
+      </section>
+
+      <section class="ad-slot" aria-label="광고 영역">
+        <span>AdSense 준비 영역</span>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Focus Map</p>
+          <h2>투자 아이디어를 다섯 개 흐름으로 정리합니다.</h2>
+        </div>
+        <div class="topic-grid" id="topic-grid"></div>
+      </section>
+
+      <section class="section two-column">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Latest Notes</p>
+            <h2>최근 투자 노트</h2>
+          </div>
+          <div class="article-list" id="latest-posts" aria-live="polite"></div>
+          <a class="text-link" href="posts/">전체 글 목록 보기</a>
+        </div>
+        <aside class="sidebar">
+          <img
+            class="profile"
+            src="assets/profile.jpg"
+            alt="Jason Jedi 블로그 프로필"
+          />
+          <h2>2005년생 개인 투자자의 공개 노트</h2>
+          <p>
+            단기 시세 예측보다 산업 변화, 병목, 자본 배분을 중심으로 미국주식과 성장 산업을 공부합니다.
+          </p>
+          <a class="button secondary full" href="https://blog.naver.com/jasonjedi" rel="noopener" target="_blank">
+            네이버 원문 블로그
+          </a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Jason Jedi Investing. 개인 투자 기록이며 투자 권유가 아닙니다.</p>
+      <nav aria-label="하단 메뉴">
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="disclaimer.html">투자 고지</a>
+        <a href="contact.html">문의</a>
+      </nav>
+    </footer>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
