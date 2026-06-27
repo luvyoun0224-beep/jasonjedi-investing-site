@@ -8,8 +8,8 @@ const formatDate = (value) => {
   }).format(date);
 };
 
-const postCard = (post) => `
-  <article class="article-card" data-category="${post.topicId}">
+const postCard = (post, index) => `
+  <article class="article-card ${index === 0 ? "featured" : ""}" data-category="${post.topicId}">
     <div class="article-meta">
       <span class="pill">${post.topicLabel}</span>
       <span>${formatDate(post.isoDate)}</span>

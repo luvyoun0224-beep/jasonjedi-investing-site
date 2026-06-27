@@ -37,7 +37,7 @@ if (!Array.isArray(posts.posts) || posts.posts.length < 10) {
 }
 
 const home = await fs.readFile(path.join(root, "index.html"), "utf8");
-for (const phrase of ["개인정보처리방침", "투자 고지", "AdSense 준비 영역"]) {
+for (const phrase of ["개인정보처리방침", "투자 고지", "Jason Jedi Investing"]) {
   if (!home.includes(phrase)) {
     console.error(`Home page is missing phrase: ${phrase}`);
     process.exit(1);
